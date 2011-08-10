@@ -6,7 +6,7 @@ dynamic programming algorithm.
 * _viterbi_ is an implementation of the
 [Viterbi algorithm](http://en.wikipedia.org/wiki/Viterbi_algorithm)
 for solving Hidden Markov Models.
-* _protein_coding_ scans genomes for ORFs \(Open reference frames\) using
+* _protein_coding_ scans genomes for ORFs \(open reference frames\) using
 a probability model.
 
 The code is largely based off of ideas in the book
@@ -23,6 +23,10 @@ too much trouble.
 A word of caution that the code is extremely numeric heavy, and for longer
 gene sequences, can take several minutes (in 2010) to compute the results,
 even with the dynamic programming optimizations.
+
+Some of these algorithms can be useful outside the computational biology
+space. For example, Smith-Waterman can be useful in doing text correction,
+and Viterbi can be used to do signal analysis for speech-to-text.
 
 Toby Jones \([www.turbohex.com](http://www.turbohex.com), [ace.roqs.net](http://ace.roqs.net)\)
 
