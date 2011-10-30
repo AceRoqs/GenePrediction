@@ -195,7 +195,7 @@ void print_histogram(
         size_t positive = 0;
         size_t pos_and_real = 0;
 
-        auto iter = std::find_if(ORFs.begin(), ORFs.end(), [index](const entry_type& entry)
+        auto iter = std::find_if(std::begin(ORFs), std::end(ORFs), [index](const entry_type& entry)
         {
             return index == entry.first;
         });

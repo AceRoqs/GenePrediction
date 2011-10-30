@@ -41,7 +41,7 @@ void process(
     size_t quad_count = 0;
 
     // Build up the probabilities against each ORF that satisfy the predicate.
-    auto iter = std::find_if(ORFs.begin(), ORFs.end(), predicate);
+    auto iter = std::find_if(std::begin(ORFs), std::end(ORFs), predicate);
 
     while(iter != ORFs.end())
     {
