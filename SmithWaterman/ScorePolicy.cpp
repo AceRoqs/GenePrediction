@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ limitations under the License.
 
 #include <cassert>
 #include <cctype>           // toupper
-#include "scorepolicy.h"    // Pick up forward declarations to ensure correctness.
+#include "ScorePolicy.h"    // Pick up forward declarations to ensure correctness.
 
 //---------------------------------------------------------------------------
 // BLOSUM 62 score matrix.

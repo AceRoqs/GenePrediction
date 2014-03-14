@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#ifndef PROTEIN_CODING_H
-#define PROTEIN_CODING_H
+#ifndef PROTEINCODING_H
+#define PROTEINCODING_H
 
 //---------------------------------------------------------------------------
 // Typedef for use in find_if.

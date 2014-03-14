@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ limitations under the License.
 #include <algorithm>    // for find_if
 #include <map>          // for map/multimap
 #include <vector>
-#include "protein_coding.h"
-#include "probability.h"
+#include "ProteinCoding.h"
+#include "Probability.h"
 
 //---------------------------------------------------------------------------
 // Index into array of probabilities for each of the k-tuples.

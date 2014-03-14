@@ -1,6 +1,6 @@
 #include <cmath>
 #include <cfloat> // for _isnan
-#include "probability.h"
+#include "Probability.h"
 
 // log_of_sum_of_logs written by Tobias Mann.
 

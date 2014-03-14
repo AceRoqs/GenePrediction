@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@ limitations under the License.
 #include <string>
 #include <iomanip>
 #include <vector>
-#include "smith_waterman.h"
-#include "scorepolicy.h"
+#include "SmithWaterman.h"
+#include "ScorePolicy.h"
 
 //---------------------------------------------------------------------------
 int Alignment_table::score_at(size_t row, size_t column) const

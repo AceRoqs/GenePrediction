@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@ limitations under the License.
 #include <string>
 #include <vector>
 #include <iostream>
-#include "scorepolicy.h"
-#include "smith_waterman.h"
+#include "ScorePolicy.h"
+#include "SmithWaterman.h"
 
 //---------------------------------------------------------------------------
 // These sample hemoglobins were taken from ExPASy.org/SwissProt.

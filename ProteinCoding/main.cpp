@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ limitations under the License.
 #include <vector>
 #include <map>          // for map/multimap
 #include "fna.h"
-#include "protein_coding.h"
+#include "ProteinCoding.h"
 
 //---------------------------------------------------------------------------
 template<typename Predicate>

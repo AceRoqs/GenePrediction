@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2006-2011 by Toby Jones.
+Copyright (C) 2006-2014 by Toby Jones.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@ limitations under the License.
 #include <cassert>
 #include <iostream>
 #include <vector>
-#include "viterbi.h"
-#include "probability.h"
+#include "Viterbi.h"
+#include "Probability.h"
 
 //---------------------------------------------------------------------------
 // 300 roll dice example taken from page 57 in Durbin, et al.

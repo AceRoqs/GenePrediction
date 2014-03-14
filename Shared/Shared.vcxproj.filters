@@ -11,7 +11,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="probability.h">
+    <ClInclude Include="Probability.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="fna.h">
@@ -19,7 +19,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="probability.cpp">
+    <ClCompile Include="Probability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fna.cpp">
