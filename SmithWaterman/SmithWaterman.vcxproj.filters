@@ -14,18 +14,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="smith_waterman.cpp">
+    <ClCompile Include="scorepolicy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scorepolicy.cpp">
+    <ClCompile Include="SmithWaterman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="smith_waterman.h">
+    <ClInclude Include="scorepolicy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="scorepolicy.h">
+    <ClInclude Include="SmithWaterman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
