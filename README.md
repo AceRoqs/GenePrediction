@@ -16,13 +16,13 @@ that can be obtained from the
 
 The code was written in 2006, but I have modernized it to use some nicer
 C++ constructs, so it requires a C++11 compiler due to the requirement
-of rvalue references and lambdas. The code was tested on Visual C++ 2010,
+of rvalue references and lambdas. The code was tested on Visual C++ 2013,
 but should work with GCC or any compiler regardless of platform without
 too much trouble.
 
 A word of caution that the code is extremely numeric heavy, and for longer
-gene sequences, can take several minutes (in 2010) to compute the results,
-even with the dynamic programming optimizations.
+gene sequences, can take several seconds to several minutes (in 2013) to
+compute the results, even with the dynamic programming optimizations.
 
 Some of these algorithms can be useful outside the computational biology
 space. For example, Smith-Waterman can be useful in doing text correction,
