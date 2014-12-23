@@ -1,5 +1,4 @@
-#ifndef PROTEINCODING_H
-#define PROTEINCODING_H
+#pragma once
 
 //---------------------------------------------------------------------------
 // Typedef for use in find_if.
@@ -18,6 +17,4 @@ void print_histogram(
     size_t max_ORF,
     const std::vector<double>& odds_ORF,
     const std::vector<double>& odds_background);
-
-#endif
 

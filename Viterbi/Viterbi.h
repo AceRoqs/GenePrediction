@@ -1,5 +1,4 @@
-#ifndef VITERBI_H
-#define VITERBI_H
+#pragma once
 
 //---------------------------------------------------------------------------
 // Definition of a probability table for dynamic programming.
@@ -52,7 +51,5 @@ public:
 
 #ifdef _DEBUG
 extern const char durbin_dice[];
-#endif
-
 #endif
 

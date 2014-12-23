@@ -1,5 +1,4 @@
-#ifndef SMITHWATERMAN_H
-#define SMITHWATERMAN_H
+#pragma once
 
 //---------------------------------------------------------------------------
 // Definition of a sequence alignment table.
@@ -38,6 +37,4 @@ public:
     void print_table(std::ostream& output_stream) const;
     void calc_pvalue(std::ostream& output_stream, unsigned int cSequences) const;
 };
-
-#endif
 
