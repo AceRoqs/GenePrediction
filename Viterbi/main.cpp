@@ -1,7 +1,7 @@
 // Viterbi algorithm for Hidden Markov Models.
 
 #include "PreCompile.h"
-#include "viterbi.h"
+#include "Viterbi.h"
 #include "fna.h"
 
 //---------------------------------------------------------------------------

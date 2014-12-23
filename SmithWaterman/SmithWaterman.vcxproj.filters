@@ -14,7 +14,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scorepolicy.cpp">
+    <ClCompile Include="Scorepolicy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SmithWaterman.cpp">
@@ -25,7 +25,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="scorepolicy.h">
+    <ClInclude Include="Scorepolicy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SmithWaterman.h">
