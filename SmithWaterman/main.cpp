@@ -21,10 +21,7 @@ limitations under the License.
 // With enough scoring data, the taxonomic position of a species
 // relative to other species can be inferred.
 
-#include <cassert>
-#include <string>
-#include <vector>
-#include <iostream>
+#include "PreCompile.h"
 #include "ScorePolicy.h"
 #include "SmithWaterman.h"
 

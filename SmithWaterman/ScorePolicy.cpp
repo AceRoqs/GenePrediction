@@ -14,8 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#include <cassert>
-#include <cctype>           // toupper
+#include "PreCompile.h"
 #include "ScorePolicy.h"    // Pick up forward declarations to ensure correctness.
 
 //---------------------------------------------------------------------------

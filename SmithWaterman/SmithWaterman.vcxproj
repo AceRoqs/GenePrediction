@@ -61,8 +61,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>PreCompile.h</PrecompiledHeaderFile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>$(SolutionDir)shared</AdditionalIncludeDirectories>
     </ClCompile>
@@ -99,13 +101,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ScorePolicy.h" />
+    <ClInclude Include="SmithWaterman.h" />
+    <ClInclude Include="PreCompile.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="ScorePolicy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SmithWaterman.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ScorePolicy.h" />
-    <ClInclude Include="SmithWaterman.h" />
+    <ClCompile Include="PreCompile.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,10 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#include <algorithm>
-#include <string>
-#include <iomanip>
-#include <vector>
+#include "PreCompile.h"
 #include "SmithWaterman.h"
 #include "ScorePolicy.h"
 

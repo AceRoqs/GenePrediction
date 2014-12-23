@@ -14,8 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#include <string>
-#include <fstream>
+#include "PreCompile.h"
 #include "fna.h"    // Pick up forward declarations to ensure correctness.
 
 //---------------------------------------------------------------------------

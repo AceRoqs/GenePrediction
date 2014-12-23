@@ -21,9 +21,15 @@
     <ClCompile Include="ProteinCoding.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PreCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProteinCoding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PreCompile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

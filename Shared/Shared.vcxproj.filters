@@ -17,12 +17,18 @@
     <ClInclude Include="fna.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PreCompile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Probability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fna.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PreCompile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

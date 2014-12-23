@@ -16,11 +16,7 @@ limitations under the License.
 
 // Prediction of Protein Coding Genes.
 
-#include <cassert>
-#include <fstream>
-#include <algorithm>    // for find_if
-#include <map>          // for map/multimap
-#include <vector>
+#include "PreCompile.h"
 #include "ProteinCoding.h"
 #include "Probability.h"
 

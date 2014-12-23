@@ -18,10 +18,7 @@ limitations under the License.
 // ORF, as used in this program means Open reading frame.
 // http://en.wikipedia.org/wiki/Open_reading_frame
 
-#include <iostream>
-#include <algorithm>    // for find_if
-#include <vector>
-#include <map>          // for map/multimap
+#include "PreCompile.h"
 #include "fna.h"
 #include "ProteinCoding.h"
 

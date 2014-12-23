@@ -16,9 +16,7 @@ limitations under the License.
 
 // Viterbi algorithm for Hidden Markov Models.
 
-#include <iostream>
-#include <string>
-#include <vector>
+#include "PreCompile.h"
 #include "viterbi.h"
 #include "fna.h"
 

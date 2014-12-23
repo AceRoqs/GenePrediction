@@ -20,12 +20,18 @@
     <ClCompile Include="SmithWaterman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PreCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scorepolicy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SmithWaterman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PreCompile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
