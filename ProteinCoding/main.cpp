@@ -10,7 +10,7 @@
 template<typename Predicate>
 void process(
     const std::string& sample_data,
-    const std::multimap<size_t, size_t>& ORFs,
+    const std::vector<std::pair<size_t, size_t>>& ORFs,
     std::vector<size_t>& count,
     std::vector<double>& odds,
     Predicate predicate)
@@ -104,8 +104,7 @@ int main()
     // Read in the gbk file and get a map of gene start nucleotides keyed to their stop nucleotide.
     // NC_000909 is M. jannaschii.
     std::cout << "Reading NC_000909.gbk..." << std::endl;
-    std::map<size_t, size_t> genes;
-    read_gbk("NC_000909.gbk", genes);
+    std::vector<size_t> stop_codons = read_gbk("NC_000909.gbk");
 
     // Read in fna file and extract the sequence information.
     std::cout << "Reading NC_000909.fna..." << std::endl;
@@ -114,9 +113,10 @@ int main()
 
     // Scan through the sequence in one pass, recording the ORFs.
     std::cout << "Recording ORFs..." << std::endl;
-    std::multimap<size_t, size_t> ORFs;
 
-    size_t max_ORF = record_ORFs(sample_data, ORFs);
+    size_t max_ORF;
+    std::vector<std::pair<size_t, size_t>> ORFs;
+    std::tie(max_ORF, ORFs) = record_ORFs(sample_data);
 
     // Build the log probability tables for each k-tuple.  Use a 3rd order
     // Markov model, which requires space proportional to the sum of the
@@ -148,7 +148,7 @@ int main()
     });
 
     // Calculate Markov model for ORFs and print histogram.
-    print_histogram(std::cout, sample_data, genes, ORFs, max_ORF, odds_ORF, odds_background);
+    print_histogram(std::cout, sample_data, stop_codons, ORFs, max_ORF, odds_ORF, odds_background);
 
     std::cout << "Program done." << std::endl;
     return 0;

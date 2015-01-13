@@ -66,8 +66,10 @@ bool is_stop_codon(unsigned int codon)
 // gbk files are GenBank files that describe genomes.
 // NCBI has genomes available for download.
 // NOTE: The file is assumed to come from a trusted source and be well-formed.
-void read_gbk(_In_ const char* filename, std::map<size_t, size_t>& genes)
+std::vector<size_t> read_gbk(_In_ const char* filename)
 {
+    std::vector<size_t> genes;
+
     std::ifstream input_file(filename);
     char line[256];
 
@@ -83,7 +85,7 @@ void read_gbk(_In_ const char* filename, std::map<size_t, size_t>& genes)
             {
                 // This is a non-complement tag.  Replace all '.' with nulls,
                 // and then extract the two values.
-                char* start_nucleotide = line;
+                //char* start_nucleotide = line;
                 char* stop_nucleotide = "";
                 char* scan_character = line;
                 while('\0' != scan_character[0])
@@ -98,24 +100,29 @@ void read_gbk(_In_ const char* filename, std::map<size_t, size_t>& genes)
                 }
 
                 // Get the start and stop nucleotides, and make them 0-based instead of 1-based.
-                int start = atoi(start_nucleotide) - 1;
                 int stop = atoi(stop_nucleotide) - 1;
 
                 // Insert into the gene map, keyed to the stop position for searching.
-                genes.insert(std::pair<size_t, size_t>(stop, start));
+                genes.push_back(stop);
             }
         }
     }
 
     input_file.close();
+
+    std::sort(std::begin(genes), std::end(genes));
+    genes.erase(std::unique(genes.begin(), genes.end()), genes.end());
+
+    return genes;
 }
 
 //---------------------------------------------------------------------------
 // Do a one pass scan through the sequence data, recording the ORFs.
 // Return the length of the longest ORF.
-size_t record_ORFs(const std::string& sample_data, std::multimap<size_t, size_t>& ORFs)
+std::tuple<size_t, std::vector<std::pair<size_t, size_t>>> record_ORFs(const std::string& sample_data)
 {
     size_t max_ORF = 0;
+    std::vector<std::pair<size_t, size_t>> ORFs;
 
     // Encode the first two characters of the sequence data to prime the loop.
     unsigned int codon = (sample_data[0] << 8) | sample_data[1];
@@ -143,14 +150,16 @@ size_t record_ORFs(const std::string& sample_data, std::multimap<size_t, size_t>
             max_ORF = std::max(max_ORF, length);
 
             // Save the start nucleotide keyed against the length.
-            ORFs.insert(std::pair<size_t, size_t>(length, start));
+            ORFs.push_back(std::pair<size_t, size_t>(length, start));
 
             // Set a new start nucleotide for this reading frame.
             start_nucleotide[(index - 2) % 3] = index + 1;
         }
     }
 
-    return max_ORF;
+    std::sort(std::begin(ORFs), std::end(ORFs));
+
+    return std::make_tuple(max_ORF, ORFs);
 }
 
 //---------------------------------------------------------------------------
@@ -158,8 +167,8 @@ size_t record_ORFs(const std::string& sample_data, std::multimap<size_t, size_t>
 void print_histogram(
     std::ostream& output_stream,
     const std::string& sample_data,
-    const std::map<size_t, size_t>& genes,
-    const std::multimap<size_t, size_t>& ORFs,
+    const std::vector<size_t>& stop_codons,
+    const std::vector<std::pair<size_t, size_t>>& ORFs,
     size_t max_ORF,
     const std::vector<double>& odds_ORF,
     const std::vector<double>& odds_background)
@@ -175,12 +184,12 @@ void print_histogram(
         size_t positive = 0;
         size_t pos_and_real = 0;
 
-        auto iter = std::find_if(std::begin(ORFs), std::end(ORFs), [index](const entry_type& entry)
+        auto iter = std::lower_bound(std::cbegin(ORFs), std::cend(ORFs), index, [](const entry_type& entry, size_t index)
         {
-            return index == entry.first;
+            return entry.first < index;
         });
 
-        while(iter != ORFs.end())
+        while(iter->first == index)
         {
             // Accumulate log probabilities for the Markov model.
             double P_prob = 0;
@@ -211,12 +220,11 @@ void print_histogram(
             }
 
             // Is there a gene from gbk file that has the same stop codon?
-            // Since the genes std::map (from the gbk file) is considered correct,
+            // Since the stop_codons array (from the gbk file) is considered correct,
             // this validates that the genes that were predicted are valid.
-            // (second = start, first = length)
             size_t stop = iter->second + iter->first - 1;
-            auto genes_iterator = genes.find(stop);
-            if(genes_iterator != genes.end())
+            auto codon_iterator = std::lower_bound(std::cbegin(stop_codons), std::cend(stop_codons), stop);
+            if(*codon_iterator == stop)
             {
                 // Record the match, and also mark if there are positive log_odds for this match.
                 ++gene_count;
@@ -228,7 +236,7 @@ void print_histogram(
             }
 
             // Continue with next ORF, starting the search where the iteration left off.
-            iter = std::find_if(++iter, ORFs.end(), [index](const entry_type& entry)
+            iter = std::find_if(++iter, std::cend(ORFs), [index](const entry_type& entry)
             {
                 return index == entry.first;
             });
