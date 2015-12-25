@@ -16,7 +16,7 @@ that can be obtained from the
 
 The code was written in 2006, but I have modernized it to use some nicer
 C++ constructs, so it requires a C++11 compiler due to the requirement
-of rvalue references and lambdas. The code was tested on Visual C++ 2013,
+of rvalue references and lambdas. The code was tested on Visual C++ 2015,
 but should work with GCC or any compiler regardless of platform without
 too much trouble.
 
