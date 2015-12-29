@@ -2,7 +2,7 @@
 
 #include "PreCompile.h"
 #include "ProteinCoding.h"
-#include "Probability.h"
+#include <Shared/Probability.h>
 
 //---------------------------------------------------------------------------
 // Index into array of probabilities for each of the k-tuples.

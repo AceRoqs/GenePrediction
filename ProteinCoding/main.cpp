@@ -3,8 +3,8 @@
 // http://en.wikipedia.org/wiki/Open_reading_frame
 
 #include "PreCompile.h"
-#include "fna.h"
 #include "ProteinCoding.h"
+#include <Shared/fna.h>
 
 //---------------------------------------------------------------------------
 template<typename Predicate>

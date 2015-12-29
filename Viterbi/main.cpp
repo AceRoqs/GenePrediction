@@ -2,7 +2,7 @@
 
 #include "PreCompile.h"
 #include "Viterbi.h"
-#include "fna.h"
+#include <Shared/fna.h>
 
 //---------------------------------------------------------------------------
 // Remap dice emissions (1-6) to indexes (0-5).

@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 14.0.23107.0
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman", "..\GenePrediction\SmithWaterman\SmithWaterman.vcxproj", "{00ABD35F-2967-4B20-B269-A1578A728701}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman", "SmithWaterman\SmithWaterman.vcxproj", "{00ABD35F-2967-4B20-B269-A1578A728701}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Viterbi", "..\GenePrediction\Viterbi\Viterbi.vcxproj", "{FC33F943-E1C2-4A5F-B380-1AD75A56B6C5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Viterbi", "Viterbi\Viterbi.vcxproj", "{FC33F943-E1C2-4A5F-B380-1AD75A56B6C5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25} = {CA348D11-0234-4C9B-8060-C6E6ECFA6A25}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProteinCoding", "..\GenePrediction\ProteinCoding\ProteinCoding.vcxproj", "{1164A821-792F-4AEC-8E0E-380C6EB9560D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProteinCoding", "ProteinCoding\ProteinCoding.vcxproj", "{1164A821-792F-4AEC-8E0E-380C6EB9560D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25} = {CA348D11-0234-4C9B-8060-C6E6ECFA6A25}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "..\GenePrediction\Shared\Shared.vcxproj", "{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "Shared\Shared.vcxproj", "{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,13 +63,11 @@ Global
 		{1164A821-792F-4AEC-8E0E-380C6EB9560D}.Release|Win32.Build.0 = Release|Win32
 		{1164A821-792F-4AEC-8E0E-380C6EB9560D}.Release|x64.ActiveCfg = Release|x64
 		{1164A821-792F-4AEC-8E0E-380C6EB9560D}.Release|x64.Build.0 = Release|x64
-		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|ARM.ActiveCfg = Debug|ARM
-		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|ARM.Build.0 = Debug|ARM
+		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|ARM.ActiveCfg = Debug|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|Win32.ActiveCfg = Debug|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|Win32.Build.0 = Debug|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Debug|x64.ActiveCfg = Debug|Win32
-		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|ARM.ActiveCfg = Release|ARM
-		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|ARM.Build.0 = Release|ARM
+		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|ARM.ActiveCfg = Release|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|Win32.ActiveCfg = Release|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|Win32.Build.0 = Release|Win32
 		{CA348D11-0234-4C9B-8060-C6E6ECFA6A25}.Release|x64.ActiveCfg = Release|Win32

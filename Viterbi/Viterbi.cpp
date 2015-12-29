@@ -1,6 +1,6 @@
 #include "PreCompile.h"
 #include "Viterbi.h"
-#include "Probability.h"
+#include <Shared/Probability.h>
 
 //---------------------------------------------------------------------------
 // 300 roll dice example taken from page 57 in Durbin, et al.
