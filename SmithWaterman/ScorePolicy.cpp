@@ -43,6 +43,12 @@ int basic_calc_score(char char1, char char2)
 }
 
 //---------------------------------------------------------------------------
+static size_t index_from_char(char char1)
+{
+    return toupper(char1) - 'A';
+}
+
+//---------------------------------------------------------------------------
 // Scoring policy against the BLOSUM-62 matrix, with a gap penalty.
 int BLOSUM62_calc_score_with_penalty(char char1, char char2, int gap_penalty)
 {
@@ -57,8 +63,8 @@ int BLOSUM62_calc_score_with_penalty(char char1, char char2, int gap_penalty)
 
     // Lookup score in BLOSUM-62 matrix.
     // ASCII/UTF-8 is assumed.
-    size_t row    = BLOSUM62_index[toupper(char1) - 'A'];
-    size_t column = BLOSUM62_index[toupper(char2) - 'A'];
+    size_t row    = BLOSUM62_index[index_from_char(char1)];
+    size_t column = BLOSUM62_index[index_from_char(char2)];
 
     // If the input strings ever come from an untrusted source, the
     // invalid character error case must be handled instead of asserting
