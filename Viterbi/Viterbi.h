@@ -23,8 +23,8 @@ private:
     const size_t m_rows;                                // Height of matrix (m_initial_probabilities.size()).
 
     // Not implemented to prevent accidental copying.
-    Probability_table(const Probability_table&);
-    Probability_table& operator=(const Probability_table&);
+    Probability_table(const Probability_table&) = delete;
+    Probability_table& operator=(const Probability_table&) = delete;
 
 protected:
     double log_prob_at(size_t row, size_t column);

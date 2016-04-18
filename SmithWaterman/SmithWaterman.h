@@ -16,8 +16,8 @@ private:
     int (*m_score_policy)(char char1, char char2);
 
     // Not implemented to prevent accidental copying.
-    Alignment_table(const Alignment_table&);
-    Alignment_table& operator=(const Alignment_table&);
+    Alignment_table(const Alignment_table&) = delete;
+    Alignment_table& operator=(const Alignment_table&) = delete;
 
 protected:
     struct residue_pair
