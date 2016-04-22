@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
-MinimumVisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 14.0.25123.0
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman", "SmithWaterman\SmithWaterman.vcxproj", "{00ABD35F-2967-4B20-B269-A1578A728701}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Viterbi", "Viterbi\Viterbi.vcxproj", "{FC33F943-E1C2-4A5F-B380-1AD75A56B6C5}"
