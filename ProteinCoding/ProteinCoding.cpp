@@ -86,7 +86,7 @@ std::vector<size_t> read_gbk(_In_ const char* filename)
                 // This is a non-complement tag.  Replace all '.' with nulls,
                 // and then extract the two values.
                 //char* start_nucleotide = line;
-                char* stop_nucleotide = "";
+                const char* stop_nucleotide = "";
                 char* scan_character = line;
                 while('\0' != scan_character[0])
                 {
