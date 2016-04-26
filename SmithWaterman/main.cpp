@@ -52,7 +52,7 @@ static std::string INSL3_HUMAN("MDPRLPAWALVLLGPALVFALGPAPTPEMREKLCGHHFVRALVRVCGG
 //---------------------------------------------------------------------------
 int main()
 {
-#ifdef _DEBUG
+#ifndef NDEBUG
     // Exercise the local alignment algorithm with sample vectors.
     {
         static std::string test_vector1("xxxcde");

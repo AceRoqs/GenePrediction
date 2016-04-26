@@ -37,7 +37,7 @@ size_t nucleotide_emission_index(char nucleotide)
 //---------------------------------------------------------------------------
 int main()
 {
-#ifdef _DEBUG
+#ifndef NDEBUG
     {
         // Exercise the Viterbi algorithm on the dice example in Durbin.
         std::cout << "HMM of Durbin Dice:\n";

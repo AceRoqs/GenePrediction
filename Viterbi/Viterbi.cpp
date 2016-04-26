@@ -3,6 +3,7 @@
 #include <Shared/Probability.h>
 
 //---------------------------------------------------------------------------
+#ifndef NDEBUG
 // 300 roll dice example taken from page 57 in Durbin, et al.
 // http://amzn.to/odfdWC
 const char durbin_dice[] = "315116246446644245311321631164152133625144543631656626566666"
@@ -18,6 +19,7 @@ const char die_type[] =    "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLLLLLLL
                            "FFFFFFFFLLLLLLLLLLLLLFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLL"
                            "LLLLLLLLFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
                            "FFFFFFFFFFFFFFFFFFFFFFFFFFFLLLLLLLLLLLLLLLLLLLLLLFFFFFFFFFFF";
+#endif
 
 //---------------------------------------------------------------------------
 double Probability_table::log_prob_at(size_t row, size_t column)
@@ -338,7 +340,7 @@ void Probability_table::train_and_print(std::ostream& output_stream)
 }
 
 //---------------------------------------------------------------------------
-#ifdef _DEBUG
+#ifndef NDEBUG
 void Probability_table::print_dice_rolls(std::ostream& output_stream)
 {
     // Test code for dice example.

@@ -44,12 +44,12 @@ public:
     void print_found_sequences(std::ostream& output_stream, size_t max_hits, size_t min_nucleotide_count);
     size_t count_hits();
     void train_and_print(std::ostream& output_stream);
-#ifdef _DEBUG
+#ifndef NDEBUG
     void print_dice_rolls(std::ostream& output_stream);
 #endif
 };
 
-#ifdef _DEBUG
+#ifndef NDEBUG
 extern const char durbin_dice[];
 #endif
 
