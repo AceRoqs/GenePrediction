@@ -80,7 +80,7 @@ int main()
         table.calc_pvalue(std::cout, 1000);
     }
 
-    const unsigned int num_permutations = 10000;
+    constexpr unsigned int num_permutations = 10000;
 
     {
         std::cout << "\nAligning  HBB_HUMAN and HBB_PANTR:\n";

@@ -3,25 +3,6 @@
 #include <Shared/Probability.h>
 
 //---------------------------------------------------------------------------
-#ifndef NDEBUG
-// 300 roll dice example taken from page 57 in Durbin, et al.
-// http://amzn.to/odfdWC
-const char durbin_dice[] = "315116246446644245311321631164152133625144543631656626566666"
-                           "651166453132651245636664631636663162326455236266666625151631"
-                           "222555441666566563564324364131513465146353411126414626253356"
-                           "366163666466232534413661661163252562462255265252266435353336"
-                           "233121625364414432335163243633665562466662632666612355245242";
-
-// Dice rolls taken from page 57 in Durbin, et al., to generate the durbin_dice output.
-// (F) Fair die, (L) Loaded die.
-const char die_type[] =    "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLLLLLLLLLLLLLLL"
-                           "LLLLLLFFFFFFFFFFFFLLLLLLLLLLLLLLLLFFFLLLLLLLLLLLLLLFFFFFFFFF"
-                           "FFFFFFFFLLLLLLLLLLLLLFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLL"
-                           "LLLLLLLLFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
-                           "FFFFFFFFFFFFFFFFFFFFFFFFFFFLLLLLLLLLLLLLLLLLLLLLLFFFFFFFFFFF";
-#endif
-
-//---------------------------------------------------------------------------
 double Probability_table::log_prob_at(size_t row, size_t column)
 {
     return m_log_prob_matrix[row * m_columns + column];
@@ -344,7 +325,7 @@ void Probability_table::train_and_print(std::ostream& output_stream)
 void Probability_table::print_dice_rolls(std::ostream& output_stream)
 {
     // Test code for dice example.
-    const size_t display_length = 60;
+    constexpr size_t display_length = 60;
     const size_t total_rows = (m_columns + display_length - 1) / display_length;
 
     // For ease of testing, ensure that the sample data is a multiple of the display length.

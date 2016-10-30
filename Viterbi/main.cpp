@@ -43,7 +43,7 @@ int main()
         std::cout << "HMM of Durbin Dice:\n";
 
         // Two models: fair die/loaded die.
-        const size_t model_count = 2;
+        constexpr size_t model_count = 2;
         std::vector<double> initial_probabilities(model_count);
         initial_probabilities[0] = 0.95;
         initial_probabilities[1] = 0.05;
@@ -56,7 +56,7 @@ int main()
         edges[1 * model_count + 1] = 0.9;
 
         // Emission probabilities.
-        const size_t emission_count = 6;
+        constexpr size_t emission_count = 6;
         std::vector<double> emission_probabilities(model_count * emission_count);
         emission_probabilities[0 * emission_count + 0] = (1.0 / 6.0);   // Probabilities of fair dice.
         emission_probabilities[0 * emission_count + 1] = (1.0 / 6.0);
@@ -90,7 +90,7 @@ int main()
 
         // Initial probabilities.
         // Two models: low G-C base pair content/high G-C base pair content.
-        const size_t model_count = 2;
+        constexpr size_t model_count = 2;
         std::vector<double> initial_probabilities(model_count);
         initial_probabilities[0] = 0.9999;
         initial_probabilities[1] = 0.0001;
@@ -103,7 +103,7 @@ int main()
         edges[1 * model_count + 1] = 0.99;
 
         // Emission probabilities.
-        const size_t emission_count = 4;
+        constexpr size_t emission_count = 4;
         std::vector<double> emission_probabilities(model_count * emission_count);
         emission_probabilities[0 * emission_count + nucleotide_emission_index('A')] = 0.25; // Probabilities of low GC genomic background.
         emission_probabilities[0 * emission_count + nucleotide_emission_index('C')] = 0.25;

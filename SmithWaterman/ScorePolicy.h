@@ -1,6 +1,6 @@
 #pragma once
 
-const char gap_character = '-';
+constexpr char gap_character = '-';
 
 // Basic scoring policy, with no gap penalty.
 // This is simply for testing.
