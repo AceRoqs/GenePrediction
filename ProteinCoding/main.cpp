@@ -4,7 +4,7 @@
 
 #include "PreCompile.h"
 #include "ProteinCoding.h"
-#include <Shared/fna.h>
+#include <Shared/fasta.h>
 
 //---------------------------------------------------------------------------
 template<typename Predicate>
@@ -108,8 +108,7 @@ int main()
 
     // Read in fna file and extract the sequence information.
     std::cout << "Reading NC_000909.fna..." << std::endl;
-    std::string sample_data;
-    read_fna("NC_000909.fna", sample_data);
+    std::string sample_data = read_fasta_file("NC_000909.fna");
 
     // Scan through the sequence in one pass, recording the ORFs.
     std::cout << "Recording ORFs..." << std::endl;

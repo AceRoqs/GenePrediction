@@ -2,7 +2,7 @@
 
 #include "PreCompile.h"
 #include "Viterbi.h"
-#include <Shared/fna.h>
+#include <Shared/fasta.h>
 
 //---------------------------------------------------------------------------
 // Remap dice emissions (1-6) to indexes (0-5).
@@ -117,8 +117,7 @@ int main()
         // Read in the sequence data.
         std::cout << "Reading NC_000909.fna..." << std::endl;
 
-        std::string sample_data;
-        read_fna("NC_000909.fna", sample_data);
+        std::string sample_data = read_fasta_file("NC_000909.fna");
 
         std::cout << "Beginning analysis..." << std::endl;
         {

@@ -14,10 +14,10 @@
     <ClInclude Include="Probability.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fna.h">
+    <ClInclude Include="PreCompile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PreCompile.h">
+    <ClInclude Include="fasta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -25,10 +25,10 @@
     <ClCompile Include="Probability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fna.cpp">
+    <ClCompile Include="PreCompile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PreCompile.cpp">
+    <ClCompile Include="fasta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

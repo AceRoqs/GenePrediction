@@ -48,8 +48,8 @@
   <PropertyGroup />
   <ItemDefinitionGroup />
   <ItemGroup>
-    <ClInclude Include="fna.h" />
-    <ClCompile Include="fna.cpp" />
+    <ClInclude Include="fasta.h" />
+    <ClCompile Include="fasta.cpp" />
     <ClInclude Include="PreCompile.h" />
     <ClCompile Include="PreCompile.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
